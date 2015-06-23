@@ -1,15 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <artifactId>hive</artifactId>
-        <groupId>org.apache.hive</groupId>
-        <version>0.13.1</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>hive-exec</artifactId>
-    <name>Hive Query Language</name>
+    <artifactId>spark-hive014-compat</artifactId>
+    <name>Spark Hive 0.14 compat</name>
+    <version>0.13.1a</version>
+    <groupId>org.spark-project.hive</groupId>
     <build>
         <sourceDirectory>${basedir}/src/org/apache/hadoop/hive/ql/security</sourceDirectory>
-
     </build>
     <properties>
         <hive.path.to.root>..</hive.path.to.root>
@@ -20,52 +16,38 @@
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-common</artifactId>
                 <version>${hadoop-23.version}</version>
-                
             </dependency>
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-mapreduce-client-core</artifactId>
                 <version>${hadoop-23.version}</version>
-                
             </dependency>
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-mapreduce-client-common</artifactId>
                 <version>${hadoop-23.version}</version>
                 <scope>test</scope>
-                
             </dependency>
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-hdfs</artifactId>
                 <version>${hadoop-23.version}</version>
-                
             </dependency>
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-yarn-api</artifactId>
                 <version>${hadoop-23.version}</version>
-                
             </dependency>
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-yarn-common</artifactId>
                 <version>${hadoop-23.version}</version>
-                
             </dependency>
             <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-yarn-client</artifactId>
                 <version>${hadoop-23.version}</version>
-                
             </dependency>
-
-        <!--<dependency>
-            <groupId>org.apache.hive</groupId>
-            <artifactId>hive-ant</artifactId>
-            <version>0.13.1</version>
-            <scope>compile</scope>
-        </dependency>-->
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-metastore</artifactId>
@@ -120,30 +102,12 @@
             <version>1.2.16</version>
             <scope>compile</scope>
         </dependency>
-        <!--<dependency>
-            <groupId>org.antlr</groupId>
-            <artifactId>antlr-runtime</artifactId>
-            <version>3.4</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.antlr</groupId>
-            <artifactId>ST4</artifactId>
-            <version>4.0.4</version>
-            <scope>compile</scope>
-        </dependency>-->
         <dependency>
             <groupId>org.apache.avro</groupId>
             <artifactId>avro</artifactId>
             <version>1.7.5</version>
             <scope>compile</scope>
         </dependency>
-        <!--<dependency>
-            <groupId>org.apache.ant</groupId>
-            <artifactId>ant</artifactId>
-            <version>1.9.1</version>
-            <scope>compile</scope>
-        </dependency>-->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
